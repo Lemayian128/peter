@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaTrade - Referral Code + Link - BIT316 - ENTERS WEB</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#080a0e;color:#e6e9ef}
+.banner{background:#d51820;color:white;text-align:center;padding:6px;font-size:10px;font-weight:800}
+.header{height:56px;background:#0f1218;border-bottom:1px solid #1e252f;display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:sticky;top:0;z-index:100}
+.logo{font-weight:800;display:flex;gap:8px;align-items:center}.logo-box{width:32px;height:32px;background:#d51820;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.layout{display:grid;grid-template-columns:250px 1fr 330px;min-height:calc(100vh - 62px)}
+.sidebar{background:#0f1218;border-right:1px solid #1e252f;padding:12px}
+.s-item{padding:10px 12px;border-radius:10px;font-size:13px;font-weight:600;color:#8b95a6;cursor:pointer;margin:3px 0;border:1px solid transparent;display:flex;justify-content:space-between}
+.s-item.active,.s-item:hover{background:#1a2332;color:white;border-color:#2a3a52;border-left:3px solid #d51820}
+.main{background:#080a0e}.chart-bar{height:44px;background:#0f1218;border-bottom:1px solid #1e252f;display:flex;align-items:center;gap:8px;padding:0 12px}
+.ct-btn{height:28px;padding:0 12px;background:#151a24;border:1px solid #1e252f;color:#8b95a6;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer}.ct-btn.active{background:white;color:#000}
+#tvChart{width:100%;height:360px}
+.card{background:#0f1218;border:1px solid #1e252f;border-radius:14px;padding:14px;margin:12px}
+input,select{width:100%;height:40px;padding:0 12px;border-radius:10px;border:1px solid #1e252f;background:#151a24;color:white;font-size:13px;margin:6px 0}
+.btn{height:42px;border:none;border-radius:10px;font-weight:800;cursor:pointer;width:100%;margin-top:8px}.btn-red{background:#d51820;color:white}.btn-green{background:#179a53;color:white}.btn-dark{background:#151a24;color:white;border:1px solid #1e252f}
+.right{background:#0f1218;border-left:1px solid #1e252f;padding:12px}
+.ai-card{background:#151a24;border:1px solid #1e252f;border-radius:14px;padding:14px;margin-bottom:12px}
+.ref-code{font-family:monospace;font-size:16px;font-weight:800;letter-spacing:2px;background:#080a0e;border:1px dashed #d51820;padding:10px;border-radius:8px;text-align:center;color:#d51820;margin:8px 0}
+.ref-link{font-size:11px;background:#080a0e;border:1px solid #1e252f;padding:10px;border-radius:8px;word-break:break-all;color:#8b95a6}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px}
+.mcard{background:#0f1218;border:1px solid #1e252f;border-radius:16px;padding:20px;width:100%;max-width:420px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(100px);background:#1a2332;border:1px solid #2a3a52;color:white;padding:12px 18px;border-radius:12px;opacity:0;transition:.3s;z-index:10000;font-weight:700}.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+@media(max-width:1100px){.layout{grid-template-columns:1fr}#tvChart{height:300px}}
+</style>
+</head>
+<body>
+<div class="banner">BIT316 FINAL - WITH REFERRAL CODE + LINK - ENTERS WEB INSTANTLY - DEMO LOCALSTORAGE - COINGECKO LIVE</div>
+<div class="header"><div class="logo"><div class="logo-box">N</div>NovaTrade <span style="font-size:10px;background:#151a24;border:1px solid #1e252f;padding:3px 8px;border-radius:20px">REFERRAL SYSTEM ADDED</span></div><div style="display:flex;gap:10px;align-items:center;font-size:11px"><div id="autoStatus" style="padding:5px 10px;background:#151a24;border-radius:20px;border:1px solid #1e252f">AUTO OFF</div><div id="uEmail" style="color:#d51820;font-weight:700"></div><div id="bal" style="font-weight:800">$0 DEMO</div><div style="color:#2ecc71">● LIVE</div></div></div>
+
+<div id="authM" class="modal"><div class="mcard">
+<h2>Enter Web - Referral System Added</h2><p style="font-size:11px;color:#8b95a6;margin:6px 0 12px">Now with Referral Code + Link. Click to ENTER.</p>
+<div style="display:flex;gap:8px;margin-bottom:12px"><button id="tabIn" class="btn btn-red" style="flex:1;margin:0">Sign In</button><button id="tabUp" class="btn btn-dark" style="flex:1;margin:0">Create Account</button></div>
+<div id="inBox">
+<input id="siEmail" placeholder="Email" value="student@strathmore.edu">
+<input id="siPass" type="password" placeholder="Any password" value="123">
+<button id="siBtn" class="btn btn-red" style="height:50px">👉 ENTER WEB NOW</button>
+<button onclick="enterWeb('guest@demo.com','Guest','')" class="btn btn-dark" style="height:48px">⚡ GUEST ENTER INSTANT</button>
+<div style="font-size:10px;color:#5a667a;text-align:center;margin-top:8px">Auto-enters in <span id="countdown">3</span>s if you wait</div>
+</div>
+<div id="upBox" style="display:none">
+<input id="suName" placeholder="Full Name" value="John Doe">
+<input id="suEmail" placeholder="Email" value="john@demo.com">
+<input id="suRefInput" placeholder="Referral Code (optional) e.g. XM-JOHN-123 - Enter friend's code">
+<input id="suPass" type="password" placeholder="Password" value="123">
+<div style="background:#151a24;padding:8px;border-radius:8px;font-size:11px;margin:6px 0;border:1px solid #1e252f">Your Referral Code will be auto-generated: <b id="previewCode" style="color:#d51820">XM-JOHN-847</b></div>
+<button id="suBtn" class="btn btn-red" style="height:50px">👉 CREATE + ENTER WEB + REFERRAL</button>
+</div>
+</div></div>
+
+<div class="layout">
+<div class="sidebar">
+<div style="font-size:10px;color:#5a667a;text-transform:uppercase;margin:8px 0">Menu</div>
+<div class="s-item active" data-pane="chart">📊 Live Chart</div>
+<div class="s-item" data-pane="refer">👥 Refer & Earn (Code+Link) <span style="background:#d51820;color:white;padding:1px 6px;border-radius:10px;font-size:9px">NEW</span></div>
+<div class="s-item" data-pane="manual">⚡ Manual Trade</div>
+<div class="s-item" data-pane="auto">🤖 Auto Bot AI</div>
+<div class="s-item" data-pane="deposit">💰 Deposit</div>
+<div class="s-item" data-pane="withdraw">💸 Withdraw</div>
+<div class="s-item" data-pane="history">📜 History</div>
+<div class="s-item" data-pane="account">👤 Account</div>
+<div class="s-item" data-pane="how">📚 How to Trade</div>
+<div style="margin-top:12px;background:#151a24;padding:10px;border-radius:10px"><b style="font-size:11px">Watchlist</b><div id="watch" style="margin-top:6px"></div></div>
+</div>
+
+<div class="main">
+<div class="chart-bar"><b>BTC/USD</b><span id="btcP" style="font-weight:800">$--</span><span id="btcChg" style="padding:2px 8px;border-radius:20px;background:#179a53;color:white;font-size:11px">--</span><button class="ct-btn active" data-type="candle">Candles</button><button class="ct-btn" data-type="line">Line</button><button class="ct-btn" data-type="area">Area</button><button class="ct-btn" id="volBtn">Volume</button></div>
+<div id="tvChart"></div>
+
+<div id="pane-chart" class="card"><div style="display:flex;justify-content:space-between"><b>Trade</b><span>Last Digit <b id="lastD">--</b> | <span id="volTxt">--</span></span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px"><input id="amt" type="number" value="0.1" step="0.01"><div id="costTxt" style="height:40px;display:flex;align-items:center;padding:0 12px;background:#151a24;border:1px solid #1e252f;border-radius:10px;font-weight:700">$0</div></div><div style="display:flex;gap:8px"><button id="buyBtn" class="btn btn-green" style="flex:1">BUY</button><button id="sellBtn" class="btn btn-red" style="flex:1">SELL</button></div></div>
+
+<div id="pane-refer" class="card" style="display:none;border:2px solid #d51820">
+<div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">👥 Refer & Earn - Referral Code + Link System</b><span style="background:#d51820;color:white;padding:3px 10px;border-radius:20px;font-size:10px">FAKE DEMO</span></div>
+
+<div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div>
+<div style="font-size:11px;color:#8b95a6">YOUR REFERRAL CODE (Share this)</div>
+<div class="ref-code" id="myRefCode">XM-GUEST-000</div>
+<div style="display:flex;gap:6px"><button onclick="copyCode()" class="btn btn-dark" style="flex:1;height:36px">Copy Code</button><button onclick="shareCode()" class="btn btn-dark" style="flex:1;height:36px">Share</button></div>
+</div>
+<div>
+<div style="font-size:11px;color:#8b95a6">YOUR REFERRAL LINK (Click to invite)</div>
+<div class="ref-link" id="myRefLink">https://your-site.vercel.app?ref=XM-GUEST-000</div>
+<div style="display:flex;gap:6px;margin-top:8px"><button onclick="copyLink()" class="btn btn-red" style="flex:1;height:36px">Copy Link</button><button onclick="copyLink()" class="btn btn-dark" style="flex:1;height:36px">WhatsApp Share</button></div>
+</div>
+</div>
+
+<div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+<div style="background:#080a0e;border:1px solid #1e252f;padding:12px;border-radius:10px;text-align:center"><div style="font-size:10px;color:#8b95a6">REFERRALS</div><div id="refCount" style="font-size:20px;font-weight:800">0</div></div>
+<div style="background:#080a0e;border:1px solid #1e252f;padding:12px;border-radius:10px;text-align:center"><div style="font-size:10px;color:#8b95a6">EARNINGS (5%)</div><div id="refEarn" style="font-size:20px;font-weight:800;color:#179a53">$0</div></div>
+<div style="background:#080a0e;border:1px solid #1e252f;padding:12px;border-radius:10px;text-align:center"><div style="font-size:10px;color:#8b95a6">BONUS RATE</div><div style="font-size:20px;font-weight:800">5%</div></div>
+</div>
+
+<div style="margin-top:12px;background:#080a0e;border:1px solid #1e252f;padding:12px;border-radius:10px">
+<div style="font-size:12px;font-weight:700">How Referral Code + Link Works (Study):</div>
+<div style="font-size:11px;color:#8b95a6;margin-top:6px;line-height:18px">
+1. Your code: <b id="explainCode" style="color:#d51820">XM-... </b> auto-generated from your name<br>
+2. Your link: <b>https://site.vercel.app?ref=YOUR_CODE</b> - share to friends<br>
+3. Friend enters your code at Create Account > field "Referral Code"<br>
+4. System checks localStorage users table for matching code<br>
+5. If valid: Friend gets $10 bonus fake, You get 5% of their first deposit fake<br>
+6. All stored in localStorage xm_enter_refC / refE tables for teacher check
+</div>
+</div>
+
+<div style="margin-top:10px;display:flex;gap:8px">
+<input id="testRefInput" placeholder="Enter friend's Referral Code to test e.g. XM-JOHN-123">
+<button id="testRefBtn" class="btn btn-dark" style="width:120px;margin:0">Validate</button>
+</div>
+<div style="margin-top:10px;display:flex;gap:8px">
+<button id="fakeRef" class="btn btn-red" style="flex:1">Simulate Friend Joins Using Your Code +$5</button>
+<button id="genNewCode" class="btn btn-dark" style="flex:1">Generate New Code</button>
+</div>
+
+<div style="margin-top:12px">
+<div style="font-size:12px;font-weight:700">Referral History (DB)</div>
+<div id="refHistory" style="margin-top:6px;background:#080a0e;border:1px solid #1e252f;padding:8px;border-radius:8px;font-size:11px;max-height:120px;overflow:auto">No referrals yet</div>
+</div>
+</div>
+
+<div id="pane-manual" class="card" style="display:none"><b>Manual Trade</b><input id="amt2" type="number" value="0.1"><div style="display:flex;gap:8px"><button id="buyBtn2" class="btn btn-green" style="flex:1">BUY</button><button id="sellBtn2" class="btn btn-red" style="flex:1">SELL</button></div></div>
+<div id="pane-auto" class="card" style="display:none"><b>Auto Bot AI</b><input id="autoStake" type="number" value="50"><div style="display:flex;gap:8px"><button id="autoStart" class="btn btn-green" style="flex:1">Start</button><button id="autoStop" class="btn btn-dark" style="flex:1">Stop</button></div><div id="autoLog" style="background:#080a0e;padding:8px;border-radius:8px;font-size:11px;height:100px;overflow:auto;margin-top:8px">Idle</div></div>
+<div id="pane-deposit" class="card" style="display:none"><b>Deposit FAKE</b><input id="depAmt" type="number" placeholder="1000"><button id="depBtn" class="btn btn-red">Deposit</button></div>
+<div id="pane-withdraw" class="card" style="display:none"><b>Withdraw FAKE</b><input id="withAmt" type="number" placeholder="500"><button id="withBtn" class="btn btn-dark">Withdraw</button></div>
+<div id="pane-history" class="card" style="display:none"><b>History</b><button id="clearH" style="font-size:10px;background:#151a24;border:1px solid #1e252f;color:white;padding:4px 8px;border-radius:6px;float:right">Clear</button><div id="histList" style="margin-top:8px"></div></div>
+<div id="pane-account" class="card" style="display:none"><b>Account - Referral Code</b><input id="accName" placeholder="Name"><input id="accEmail" placeholder="Email"><div style="background:#151a24;padding:10px;border-radius:8px;margin:8px 0"><div style="font-size:11px">Your Referral Code:</div><div id="accRefCode" style="font-family:monospace;font-weight:800;color:#d51820">--</div><div style="font-size:11px;margin-top:6px">Your Referral Link:</div><div id="accRefLink" style="font-size:10px;word-break:break-all;color:#8b95a6">--</div></div><button id="saveAcc" class="btn btn-red">Save</button><button id="logoutBtn" class="btn btn-dark">Logout</button></div>
+<div id="pane-how" class="card" style="display:none"><b>How Referral Works</b><div style="font-size:12px;color:#8b95a6;margin-top:6px">Code + Link system uses localStorage users table. Teacher can check Application > LocalStorage.</div></div>
+</div>
+
+<div class="right">
+<div class="ai-card"><b>🤖 AI Scanner</b><div style="display:flex;justify-content:space-between;margin-top:6px"><span>Signal:</span><b id="aiSignal">ANALYZING</b></div><div style="font-size:10px;display:flex;justify-content:space-between"><span>Conf</span><span id="aiConf">--%</span></div><div style="height:8px;background:#080a0e;border-radius:20px;overflow:hidden"><div id="aiConfBar" style="height:100%;width:0%;background:#179a53;transition:1s"></div></div><div style="font-size:11px;margin-top:6px"><div>MA: <b id="aiMA">--</b></div><div>Trend: <b id="aiTrend">--</b></div></div><div id="aiReason" style="font-size:11px;background:#080a0e;padding:8px;border-radius:8px;margin-top:6px;color:#8b95a6">AI analyzing...</div><button id="aiTradeBtn" class="btn btn-red">Follow AI</button></div>
+<div class="ai-card"><b style="font-size:11px">Your Referral (Quick)</b><div style="margin-top:6px"><div style="font-size:10px;color:#8b95a6">Code:</div><div id="quickCode" style="font-weight:800;color:#d51820;font-family:monospace">--</div><div style="font-size:10px;color:#8b95a6;margin-top:6px">Link:</div><div id="quickLink" style="font-size:9px;word-break:break-all;color:#8b95a6">--</div></div><div style="margin-top:8px;font-size:11px">Referrals: <b id="quickCount">0</b> | Earn <b id="quickEarn">$0</b></div></div>
+<div class="ai-card"><b style="font-size:11px">Open Positions</b><div id="openPos" style="margin-top:6px;font-size:11px;color:#5a667a">No positions</div></div>
+</div>
+</div>
+
+<div id="toast" class="toast"><span id="tText"></span></div>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+let btc=0,candleData=[],chart,candleSeries,lineSeries,areaSeries,barSeries,volSeries,autoInt=null;
+let user=JSON.parse(localStorage.getItem('xm_ref_user')||'null'),bal=parseFloat(localStorage.getItem('xm_ref_bal')||'24562.8'),txs=JSON.parse(localStorage.getItem('xm_ref_hist')||'[]'),users=JSON.parse(localStorage.getItem('xm_ref_users')||'[]'),positions=JSON.parse(localStorage.getItem('xm_ref_pos')||'[]'),refC=parseInt(localStorage.getItem('xm_ref_refC')||'0'),refE=parseFloat(localStorage.getItem('xm_ref_refE')||'0'),refHist=JSON.parse(localStorage.getItem('xm_ref_refHist')||'[]');
+function genCode(name){const clean=(name||'USER').replace(/[^A-Z0-9]/gi,'').substring(0,4).toUpperCase()||'USER';return 'XM-'+clean+'-'+Math.floor(100+Math.random()*900);}
+function fmt(v){return '$'+(v<1?v.toFixed(4):v.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}))}
+function toast(m){$('tText').textContent=m;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),3000)}
+window.copyCode=()=>{navigator.clipboard.writeText($('myRefCode').textContent);toast('Copied Referral Code: '+$('myRefCode').textContent);};
+window.copyLink=()=>{navigator.clipboard.writeText($('myRefLink').textContent);toast('Copied Referral Link');};
+window.shareCode=()=>{if(navigator.share){navigator.share({title:'Join NovaTrade',text:'Use my referral code '+$('myRefCode').textContent+' and get bonus!',url:$('myRefLink').textContent});}else{copyLink();}};
+window.enterWeb=(email,name,refInput)=>{let code=genCode(name||email);if(user&&user.refCode)code=user.refCode;else if(users.find(u=>u.email===email)?.refCode)code=users.find(u=>u.email===email).refCode;let referrer=null;if(refInput){referrer=users.find(u=>u.refCode===refInput.trim().toUpperCase());}else{const urlParams=new URLSearchParams(window.location.search);const refFromUrl=urlParams.get('ref');if(refFromUrl)referrer=users.find(u=>u.refCode===refFromUrl.toUpperCase());}
+const u={email:email||'guest@demo.com',name:name||'Guest',refCode:code,created:new Date().toISOString(),referredBy:referrer?referrer.refCode:null};
+if(!users.find(x=>x.email===u.email)){users.push(u);if(referrer){refC++;const bonus=10;bal+=bonus;refHist.push({time:new Date().toLocaleTimeString(),code:referrer.refCode,newUser:u.email,bonus});toast('Referral Code Valid! Referrer '+referrer.email+' gets bonus. You got $10 bonus FAKE');}localStorage.setItem('xm_ref_users',JSON.stringify(users));}
+if(referrer&&users.find(x=>x.refCode===referrer.refCode)){const idx=users.findIndex(x=>x.refCode===referrer.refCode);users[idx].refCount=(users[idx].refCount||0)+1;}
+localStorage.setItem('xm_ref_user',JSON.stringify(u));user=u;$('authM').style.display='none';updateRefUI();save();toast('ENTERED WEB - Code: '+code+' - Link: '+window.location.origin+'?ref='+code);};
+function updateRefUI(){if(!user)return;const link=window.location.origin+window.location.pathname+'?ref='+user.refCode;$('myRefCode').textContent=user.refCode;$('myRefLink').textContent=link;$('accRefCode').textContent=user.refCode;$('accRefLink').textContent=link;$('quickCode').textContent=user.refCode;$('quickLink').textContent=link;$('explainCode').textContent=user.refCode;$('quickCount').textContent=refC;$('quickEarn').textContent=fmt(refE);$('refCount').textContent=refC;$('refEarn').textContent=fmt(refE);$('previewCode').textContent=genCode($('suName').value||'JOHN');$('refHistory').innerHTML=refHist.length?refHist.map(r=>`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #151a24"><span>${r.time} - ${r.newUser} used ${r.code}</span><span style="color:#179a53">+${fmt(r.bonus)}</span></div>`).join(''):'No referrals yet - Share your code!';}
+function save(){localStorage.setItem('xm_ref_bal',bal);localStorage.setItem('xm_ref_hist',JSON.stringify(txs));localStorage.setItem('xm_ref_pos',JSON.stringify(positions));localStorage.setItem('xm_ref_refC',refC);localStorage.setItem('xm_ref_refE',refE);localStorage.setItem('xm_ref_refHist',JSON.stringify(refHist));localStorage.setItem('xm_ref_users',JSON.stringify(users));$('bal').textContent=fmt(bal)+' DEMO';if(user){$('uEmail').textContent=user.email}renderH();renderPos();updateRefUI();}
+function addTx(t,d,a){txs.unshift({time:new Date().toLocaleTimeString(),type:t,detail:d,amt:a,bal});save();}
+function renderH(){$('histList').innerHTML=txs.length?txs.map(x=>`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #151a24;font-size:11px"><div><b style="color:${x.type.includes('BUY')?'#179a53':'#d51820'}">${x.type}</b><div style="color:#5a667a;font-size:10px">${x.detail}</div></div><div>${x.amt?fmt(x.amt):''}</div></div>`).join(''):'<div style="color:#5a667a">No history</div>';}
+function renderPos(){if(!positions.length){$('openPos').innerHTML='<div style="color:#5a667a">No positions</div>';return;}$('openPos').innerHTML=positions.map((p,i)=>{const pnl=(btc-p.entry)*p.vol*(p.side==='BUY'?1:-1);return `<div style="padding:6px 0;border-bottom:1px solid #151a24"><div style="display:flex;justify-content:space-between"><b style="color:${p.side==='BUY'?'#179a53':'#d51820'}">${p.side} ${p.vol}</b><span style="color:${pnl>=0?'#179a53':'#d51820'}">${pnl>=0?'+':''}${fmt(pnl)}</span></div><button onclick="closePos(${i})" style="font-size:10px;background:#151a24;border:1px solid #1e252f;color:white;padding:2px 6px;border-radius:4px">Close</button></div>`}).join('');}
+window.closePos=i=>{const p=positions[i];const pnl=(btc-p.entry)*p.vol*(p.side==='BUY'?1:-1);bal+=pnl;positions.splice(i,1);addTx('CLOSE',`Close ${fmt(pnl)}`,pnl);toast('Closed '+fmt(pnl));}
+function initChart(){const cont=$('tvChart');chart=LightweightCharts.createChart(cont,{layout:{background:{color:'#080a0e'},textColor:'#5a667a'},grid:{vertLines:{color:'#10151f'},horzLines:{color:'#10151f'}},rightPriceScale:{borderColor:'#1e252f'},timeScale:{borderColor:'#1e252f',timeVisible:true},handleScroll:{mouseWheel:true,pressedMouseMove:true,horzTouchDrag:true,vertTouchDrag:true},handleScale:{axisPressedMouseMove:true,mouseWheel:true,pinch:true}});candleSeries=chart.addCandlestickSeries({upColor:'#179a53',downColor:'#d51820',borderVisible:false,wickUpColor:'#179a53',wickDownColor:'#d51820'});lineSeries=chart.addLineSeries({color:'#d51820',lineWidth:2,visible:false});areaSeries=chart.addAreaSeries({topColor:'rgba(213,24,32,0.3)',bottomColor:'rgba(0,0,0,0)',lineColor:'#d51820',lineWidth:2,visible:false});barSeries=chart.addBarSeries({upColor:'#179a53',downColor:'#d51820',visible:false});volSeries=chart.addHistogramSeries({priceScaleId:'',visible:false});let now=Math.floor(Date.now()/1000)-140*60;let price=65000;for(let i=0;i<140;i++){const o=price;price+=(Math.random()-0.5)*200;const h=Math.max(o,price)+Math.random()*80;const l=Math.min(o,price)-Math.random()*80;const c=price;candleData.push({time:now+i*60,open:o,high:h,low:l,close:c});}candleSeries.setData(candleData);lineSeries.setData(candleData.map(c=>({time:c.time,value:c.close})));areaSeries.setData(candleData.map(c=>({time:c.time,value:c.close})));barSeries.setData(candleData);volSeries.setData(candleData.map(c=>({time:c.time,value:Math.random()*100+20,color:c.close>=c.open?'rgba(23,154,83,0.4)':'rgba(213,24,32,0.4)'})));chart.timeScale().fitContent();new ResizeObserver(()=>chart.applyOptions({width:cont.clientWidth,height:cont.clientHeight})).observe(cont);}
+function check(){if(user){$('authM').style.display='none';updateRefUI();}else{$('authM').style.display='flex';let c=3;const iv=setInterval(()=>{c--;const el=$('countdown');if(el)el.textContent=c;if(c<=0){clearInterval(iv);if(!user)enterWeb('auto@demo.com','Auto Enter','');}},1000);}save();}
+$('tabIn').onclick=()=>{$('inBox').style.display='block';$('upBox').style.display='none';$('tabIn').className='btn btn-red';$('tabUp').className='btn btn-dark';};
+$('tabUp').onclick=()=>{$('inBox').style.display='none';$('upBox').style.display='block';$('tabUp').className='btn btn-red';$('tabIn').className='btn btn-dark';};
+$('siBtn').onclick=()=>enterWeb($('siEmail').value.trim()||'student@demo.com','Student','');
+$('suBtn').onclick=()=>enterWeb($('suEmail').value.trim()||'new@demo.com',$('suName').value.trim()||'New User',$('suRefInput').value.trim());
+$('suName').oninput=()=>{$('previewCode').textContent=genCode($('suName').value||'JOHN');};
+document.querySelectorAll('.s-item').forEach(it=>it.onclick=()=>{document.querySelectorAll('.s-item').forEach(s=>s.classList.remove('active'));it.classList.add('active');document.querySelectorAll('[id^="pane-"]').forEach(p=>p.style.display='none');const id='pane-'+it.dataset.pane;if($(id))$(id).style.display='block';if(it.dataset.pane==='chart')$('pane-chart').style.display='block';});
+document.querySelectorAll('[data-type]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-type]').forEach(x=>x.classList.remove('active'));b.classList.add('active');candleSeries.applyOptions({visible:b.dataset.type==='candle'});lineSeries.applyOptions({visible:b.dataset.type==='line'});areaSeries.applyOptions({visible:b.dataset.type==='area'});barSeries.applyOptions({visible:b.dataset.type==='bars'});});
+$('volBtn').onclick=()=>{const a=$('volBtn').classList.toggle('active');volSeries.applyOptions({visible:a});};
+function place(side){if(!user)return toast('Enter web first');const vol=parseFloat($('amt').value||0.1);positions.push({side,vol,entry:btc});addTx(side,side+' '+vol+' @ '+fmt(btc),-vol*btc/100);toast(side+' order - ENTERS');}
+$('buyBtn').onclick=()=>place('BUY');$('sellBtn').onclick=()=>place('SELL');$('buyBtn2').onclick=()=>place('BUY');$('sellBtn2').onclick=()=>place('SELL');
+$('depBtn').onclick=()=>{const v=parseFloat($('depAmt').value);if(!v)return alert('Amount');bal+=v;addTx('DEPOSIT','Deposit FAKE',v);toast('+'+fmt(v));};
+$('withBtn').onclick=()=>{const v=parseFloat($('withAmt').value);if(!v||v>bal)return toast('Insufficient');bal-=v;addTx('WITHDRAW','Withdraw FAKE',-v);toast('-'+fmt(v));};
+$('clearH').onclick=()=>{txs=[];save();};
+$('fakeRef').onclick=()=>{refC++;refE+=5;bal+=5;refHist.push({time:new Date().toLocaleTimeString(),code:user?user.refCode:'XM-TEST',newUser:'friend'+Math.floor(Math.random()*100)+'@demo.com',bonus:5});addTx('REFER','Referral bonus friend used '+ (user?user.refCode:'CODE'),5);save();toast('Friend used your code! +$5 FAKE - Code: '+(user?user.refCode:''));};
+$('genNewCode').onclick=()=>{if(!user)return;const newC=genCode(user.name);user.refCode=newC;const idx=users.findIndex(u=>u.email===user.email);if(idx>=0)users[idx].refCode=newC;localStorage.setItem('xm_ref_user',JSON.stringify(user));localStorage.setItem('xm_ref_users',JSON.stringify(users));updateRefUI();save();toast('New Code Generated: '+newC);};
+$('testRefBtn').onclick=()=>{const code=$('testRefInput').value.trim().toUpperCase();const found=users.find(u=>u.refCode===code);if(found)toast('Valid! Code belongs to '+found.email+' - '+found.name);else toast('Invalid code - Not found in DB. Create accounts first to generate codes.');};
+$('saveAcc').onclick=()=>{if(!user)return;user.name=$('accName').value;localStorage.setItem('xm_ref_user',JSON.stringify(user));toast('Saved');};$('logoutBtn').onclick=()=>{localStorage.removeItem('xm_ref_user');user=null;check();};
+function runAI(){if(candleData.length<10)return;const closes=candleData.slice(-20).map(c=>c.close);const ma5=closes.slice(-5).reduce((a,b)=>a+b,0)/5;const ma10=closes.slice(-10).reduce((a,b)=>a+b,0)/10;const vol=Math.max(...candleData.slice(-20).map(c=>c.high))-Math.min(...candleData.slice(-20).map(c=>c.low));let sig='HOLD',conf=50;if(ma5>ma10){sig='BUY';conf=75+Math.random()*20;}else if(ma5<ma10){sig='SELL';conf=75+Math.random()*20;}else{conf=45+Math.random()*15;}$('aiSignal').textContent=sig;$('aiSignal').style.color=sig==='BUY'?'#179a53':sig==='SELL'?'#d51820':'#8b95a6';$('aiConf').textContent=conf.toFixed(0)+'%';$('aiConfBar').style.width=conf.toFixed(0)+'%';$('aiConfBar').style.background=sig==='BUY'?'#179a53':sig==='SELL'?'#d51820':'#5a667a';$('aiMA').textContent=fmt(ma5).replace('$','')+'/'+fmt(ma10).replace('$','');$('aiTrend').textContent=ma5>ma10?'UPTREND':'DOWNTREND';$('aiReason').textContent=sig!=='HOLD'?`AI: ${sig} - MA crossover - Confidence ${conf.toFixed(0)}% - Share your referral code!`:`HOLD - Sideways - Vol ${fmt(vol)}`;$('lastD').textContent=Math.floor(btc)%10;$('volTxt').textContent=fmt(vol);window._sig=sig;}
+$('aiTradeBtn').onclick=()=>{if(window._sig&&window._sig!=='HOLD')place(window._sig);else toast('AI says HOLD');};
+$('autoStart').onclick=()=>{if(autoInt)return;autoInt=setInterval(()=>{if(window._sig&&window._sig!=='HOLD'){place(window._sig);$('autoLog').innerHTML+=new Date().toLocaleTimeString()+' AI '+window._sig+'<br>';}},4000);toast('Auto ON');$('autoStatus').textContent='AUTO ON';};$('autoStop').onclick=()=>{clearInterval(autoInt);autoInt=null;$('autoStatus').textContent='AUTO OFF';toast('Auto OFF');};
+async function fetchLive(){try{const r=await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,cardano&vs_currencies=usd&include_24hr_change=true');const d=await r.json();btc=d.bitcoin.usd;const now=Math.floor(Date.now()/1000);if(candleData.length){const last=candleData[candleData.length-1];if(now-last.time>=60){const nc={time:now,open:last.close,high:Math.max(last.close,btc)+40,low:Math.min(last.close,btc)-40,close:btc};candleData.push(nc);if(candleData.length>200)candleData.shift();candleSeries.setData(candleData);lineSeries.setData(candleData.map(c=>({time:c.time,value:c.close})));areaSeries.setData(candleData.map(c=>({time:c.time,value:c.close})));barSeries.setData(candleData);volSeries.setData(candleData.map(c=>({time:c.time,value:Math.random()*100+20,color:c.close>=c.open?'rgba(23,154,83,0.4)':'rgba(213,24,32,0.4)'})));}else{last.close=btc;last.high=Math.max(last.high,btc);last.low=Math.min(last.low,btc);candleSeries.update(last);lineSeries.update({time:last.time,value:btc});areaSeries.update({time:last.time,value:btc});barSeries.update(last);}}$('btcP').textContent=fmt(btc);const chg=d.bitcoin.usd_24h_change||0;$('btcChg').textContent=(chg>=0?'+':'')+chg.toFixed(2)+'%';$('btcChg').style.background=chg>=0?'#179a53':'#d51820';$('costTxt').textContent=fmt((parseFloat($('amt').value||0.1)*btc/100));$('watch').innerHTML=Object.keys(d).map(k=>`<div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid #151a24;font-size:11px"><span>${k.toUpperCase()}</span><span>${fmt(d[k].usd).replace('$','')}</span></div>`).join('');runAI();renderPos();}catch(e){}}
+initChart();check();fetchLive();setInterval(fetchLive,15000);setInterval(runAI,3000);
+})();
+</script>
+</body>
+</html>
